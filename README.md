@@ -20,3 +20,10 @@
 ####    发送消息
     //发送请求
     PM.send("targetName" , "callbackName" ,data)
+
+   * targetName:  目标窗体名称,子窗体一律填"MESTER",父窗体要根据 iframe中的名称来填写,如 <br>
+   ```
+    <iframe src="slave1.html" name="SLAVE1" id="SLAVE1"></iframe> 
+    //发送请求
+    PM.send("SLAVE1" , "callbackName" ,data)
+   ```
