@@ -1,8 +1,8 @@
-# GameHub
+# PostMessage
 
-> 通信组件
+> html5跨域api postMessage 解决同一浏览器多个窗口(iframe)跨域通信的js
 
-## Build Setup
+## 使用说明
 
 ``` bash
 # install dependencies
