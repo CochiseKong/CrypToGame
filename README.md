@@ -6,10 +6,10 @@
 
 ``` bash
 # install dependencies
-npm install
+[百度](http://baidu.com)
 
 # serve with hot reload at localhost:8080
-npm run dev
+![baidu](http://www.baidu.com/img/bdlogo.gif "百度logo")  
 
 # build for production with minification
 npm run build
