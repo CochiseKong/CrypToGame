@@ -6,7 +6,7 @@
 
 ####    script 引用
      <script type="text/javascript" src="路径/PostMessage.js"></script>
-
+<br><br>
 ####    初始化
     //监听事件
     PM.extends("callbackName", function(data) {
@@ -16,7 +16,7 @@
    * callbackName:  本体窗口的回调名称(可自定义,其他窗口发送消息给本窗体需要对应此名称)
    * data:  接收到的数据
 
-
+<br><br>
 ####    发送消息
     //发送请求
     PM.send("targetName" , "callbackName" ,data)
@@ -28,5 +28,6 @@
     PM.send("SLAVE1" , "callbackName" ,data)
    ```
 
-   *    callbackName: 目标窗体的回调函数名称
+   *    callbackName: 目标窗体的回调函数名称
    *    data: 发送的数据
+<br><br>
