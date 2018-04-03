@@ -4,10 +4,10 @@
 
 ## 使用
 
-####    script 引用
+###    script 引用
      <script type="text/javascript" src="路径/PostMessage.js"></script>
 <br><br>
-####    初始化
+###    初始化
     //监听事件
     PM.extends("callbackName", function(data) {
         业务逻辑....
@@ -17,7 +17,7 @@
    * data:  接收到的数据
 
 <br><br>
-####    发送消息
+###   发送消息
     //发送请求
     PM.send("targetName" , "callbackName" ,data)
 >参数
@@ -31,3 +31,37 @@
    *    callbackName: 目标窗体的回调函数名称
    *    data: 发送的数据
 <br><br>
+
+###    API
+>通讯协议
+*   请求
+```
+    {
+        Type: TypeName,
+        Data: YourData
+    }
+
+    //充值请求 实例
+    PM.send("targetName" , "callbackName" ,{
+        Type: "pay",
+        Data: ""
+    })
+```
+    
+*   响应
+```
+    {
+        Type: TypeName,
+        Data: Datas
+    }
+
+    //返回充值消息 实例
+    {
+        Type: "pay",
+        Data: {
+           Status: true,
+             Coin: "USD",
+           Amount: 1000
+        }
+    }
+```
