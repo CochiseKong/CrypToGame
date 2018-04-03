@@ -47,7 +47,7 @@
         Data: YourData
     }
 
-    // 充值请求
+    //充值请求
     PM.send("targetName" , "callbackName" ,{
         Type: "pay",
         Data: ""
@@ -61,7 +61,7 @@
         Data: Datas
     }
 
-    // 返回充值消息
+    //返回充值消息
     {
         Type: "pay",
         Data: {
@@ -73,18 +73,18 @@
 ```
 <br>
 
-*   获取账号信息 **Info** 
+*   获取账号信息 **Info** 
 
     <!-- (页面加载父窗口会主动发送) -->
 
 参数
 
-字段 | 类型 | 描述 
-- | :-: | :- 
-Type | string| 类型为 info 
-Data.Uid | string | 用户ID 
-Data.Vip | uint32 | 用户Vip等级
-Data.Name | string | 用户名称 
-Data.Lang | string | 语言
+| 字段 | 类型 | 描述 |
+| - | :-: | :- |
+|Type | string| 类型为 info |
+|Data.Uid | string | 用户ID |
+|Data.Vip | uint32 | 用户Vip等级|
+|Data.Name | string | 用户名称 |
+|Data.Lang | string | 语言|
 
 
