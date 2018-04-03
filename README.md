@@ -38,7 +38,7 @@
    *    data: 发送的数据
 <br><br>
 
-###    API  (发送/接收中的data)
+###    API
 >通讯协议
 *   请求
 ```javascript
@@ -65,7 +65,7 @@
     {
         Type: "pay",
         Data: {
-           Status: true,
+           Success: true,
              Coin: "USD",
            Amount: 1000
         }
@@ -73,7 +73,8 @@
 ```
 <br>
 
-*   获取账号信息 **Info** 
+
+* **INFO**   (账号信息)
 
     <!-- (页面加载父窗口会主动发送) -->
 
@@ -86,5 +87,21 @@
 |Data.Vip | uint32 | 用户Vip等级|
 |Data.Name | string | 用户名称 |
 |Data.Lang | string | 语言|
+
+<br>
+
+* **PAY**   (充值)
+
+    <!-- (页面加载父窗口会主动发送) -->
+
+参数
+
+| 字段 | 类型 | 描述 |
+| - | :-: | :- |
+|Type | string| 类型为 pay |
+|Data.Success | bool | 是否充值成功 |
+|Data.Coin | uint32 | 币种。1 - BTC; 144 - USD|
+|Data.Amount | float64 | 充值数量 |
+
 
 
