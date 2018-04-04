@@ -3,7 +3,7 @@
 <head>
 	<title>slave1</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<script type="text/javascript" src="../src/PostMessage.js"></script>
+	<script type="text/javascript" src="../src/cryptogame.js"></script>
 </head>
 <body>
 	<div id="main">
@@ -13,14 +13,14 @@
 	<div id="content"></div>
 </body>
 <script type="text/javascript">
-	var me = PM.component.name;
+	var me = CTG.component.name;
 	function genInfo(name){
 		return {info : "Hello [" + name + "] , I am [" + me + "] Now at " + new Date()};
 	}
 	function sendMesg (argument) {
-		PM.send("MESTER" , "changeMaster" ,genInfo("MESTER"));
+		CTG.send("MESTER" , "changeMaster" ,genInfo("MESTER"));
 	}
-	PM.extends("changeSlave1" , function(data){
+	CTG.addEventListener("changeSlave1" , function(data){
 		writeHtml(data.info);
 		return "Slave1 changeSlave1 is called";
 	});
@@ -28,7 +28,7 @@
 		var content = document.getElementById("content");
 		content.innerHTML += "<br/>" + text;
 	}
-	console.log(PM);
+	console.log(CTG);
 </script>
 
 </html>

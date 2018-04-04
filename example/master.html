@@ -3,7 +3,7 @@
 <head>
 	<title>Test Page</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<script type="text/javascript" src="../src/PostMessage.js"></script>
+	<script type="text/javascript" src="../src/cryptogame.js"></script>
 </head>
 <body>
 	Test Page MASTER
@@ -16,23 +16,23 @@
 </body>
 
 <script type="text/javascript">
-	var me = PM.component.name;
+	var me = CTG.component.name;
 	function genInfo(name){
 		return {info : "Hello [" + name + "] , I am [" + me + "] Now at " + new Date()};
 	}
 
 	function sendMesg1 (argument) {
-		PM.send("SLAVE1" , "changeSlave1" ,genInfo("SLAVE1") ,function(data){
+		CTG.send("SLAVE1" , "changeSlave1" ,genInfo("SLAVE1") ,function(data){
 			console.log("callback fire");
 			writeHtml(data);
 		});
 	}
 
 	function sendMesg2 (argument) {
-		PM.send("SLAVE2" , "changeSlave2" , genInfo("SLAVE2"));
+		CTG.send("SLAVE2" , "changeSlave2" , genInfo("SLAVE2"));
 	}
 
-	PM.extends("changeMaster" , function(data){
+	CTG.addEventListener("changeMaster" , function(data){
 		writeHtml(data.info);
 	});
 
@@ -40,7 +40,7 @@
 		var content = document.getElementById("content");
 		content.innerHTML += "<br/>" + text;
 	}
-	console.log(PM);
+	console.log(CTG);
 
 </script>
 </html>
