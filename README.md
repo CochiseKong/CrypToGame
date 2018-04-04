@@ -1,4 +1,4 @@
-# PostMessage
+# CrypToGame
 
 > html5跨域api postMessage 解决同一浏览器多个窗口(iframe)跨域通信的js
 
@@ -6,13 +6,13 @@
 
 ###    script 引用
 ```javascript
-     <script type="text/javascript" src="路径/PostMessage.js"></script>
+     <script type="text/javascript" src="路径/cryptogame.js"></script>
 ```
 <br><br>
 ###    初始化
 ```javascript
     //监听事件
-    PM.extends("callbackName", function(data) {
+    CTG.addEventListener("callbackName", function(data) {
         业务逻辑....
     });
 ```
@@ -24,14 +24,14 @@
 ###   发送消息
 ```javascript
     //发送请求
-    PM.send("targetName" , "callbackName" ,data)
+    CTG.send("targetName" , "callbackName" ,data)
 ```
 >参数
    * targetName:  目标窗体名称,子窗体一律填"MESTER",父窗体要根据 iframe中的名称来填写,如 <br>
  ```javascript
     <iframe src="slave1.html" name="SLAVE1" id="SLAVE1"></iframe> 
     //发送请求
-    PM.send("SLAVE1" , "callbackName" ,data)
+    CTG.send("SLAVE1" , "callbackName" ,data)
  ```
 
    *    callbackName: 目标窗体的回调函数名称
@@ -48,7 +48,7 @@
     }
 
     //充值请求
-    PM.send("targetName" , "callbackName" ,{
+    CTG.send("targetName" , "callbackName" ,{
         Type: "pay",
         Data: ""
     })
@@ -74,7 +74,7 @@
 <br>
 
 
-* **INFO**   (账号信息)
+* **getUserInfo**   (账号信息)
 
     <!-- (页面加载父窗口会主动发送) -->
 
@@ -82,7 +82,7 @@
 
 | 字段 | 类型 | 描述 |
 | - | :-: | :- |
-|Type | string| 类型为 info |
+|Type | string| 类型为 getUserInfo |
 |Data.Uid | string | 用户ID |
 |Data.Vip | uint32 | 用户Vip等级|
 |Data.Name | string | 用户名称 |

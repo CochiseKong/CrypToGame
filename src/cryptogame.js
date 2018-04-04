@@ -1,7 +1,7 @@
 (function (window) {
-	var PM = function () {
+	var CTG = function () {
 	};
-	PM.prototype = {
+	CTG.prototype = {
 		version: "0.0.1",
 		component: {},
 		components: {},
@@ -21,7 +21,7 @@
 			};
 			//this.components[this.component.name] = this.component;
 			this.register(this.component);
-			this.extends("register", function (data) {
+			this.addEventListener("register", function (data) {
 				this.components[data.component.name] = data.component;
 			});
 		},
@@ -43,7 +43,7 @@
 		* @param {String} name接口名称
 		* @param {Function} fun 接口方法
 		*/
-		extends: function (name, fun) {
+		addEventListener: function (name, fun) {
 			this.interfaces[name] = fun;
 		},
 		/**
@@ -86,7 +86,7 @@
 				type: type || "REQUEST"
 			};
 			if (callback)
-				this.extends(method + "Callback", callback);
+				this.addEventListener(method + "Callback", callback);
 			var w = this.isMaster() ? window.document[componentName] : window.top;
 			// var host = this.isMaster() ? this.components[componentName].host : "*";
 			//console.info(host);
@@ -122,17 +122,17 @@
 		listen: function () {
 			if (window.addEventListener) {// 非IE
 				window.addEventListener("message", function (event) {
-					window.PM.process(event);
+					window.CTG.process(event);
 				}, false);
 			} else {// IE
 				window.attachEvent("onmessage", function (event) {
-					window.PM.process(event);
+					window.CTG.process(event);
 				});
 			}
 		}
 	};
-	window.PM = new PM();
-	window.PM.init();
-	window.PM.listen();
+	window.CTG = new CTG();
+	window.CTG.init();
+	window.CTG.listen();
 
 })(this);
