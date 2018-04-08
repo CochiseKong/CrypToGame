@@ -56,14 +56,14 @@
 *   响应
 ```javascript
     {   
-      Status: true,
+      Status: true/false,
         Type: TypeName,
         Data: Datas
     }
 
     //返回充值消息
     {
-      Status: true/false,
+      Status: true,
         Type: "pay",
         Data: {
              Coin: "USD",
