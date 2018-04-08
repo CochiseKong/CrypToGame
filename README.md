@@ -50,7 +50,6 @@
     //充值请求
     CTG.send("targetName" , "callbackName" ,{
         Type: "pay",
-        Data: ""
     })
 ```
     
@@ -64,7 +63,7 @@
 
     //返回充值消息
     {
-      Status: true,
+      Status: true/false,
         Type: "pay",
         Data: {
              Coin: "USD",
