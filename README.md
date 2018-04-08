@@ -111,9 +111,26 @@
 
 * ### **PAY**
 
-    <!-- (页面加载父窗口会主动发送) -->
+ **请求充值**
+```javascript
+    {
+        Type: "pay"
+    }
+```
+**返回账户信息**
 
-参数（发送充值请求时data为空）
+```javascript
+    {
+        Type: "pay",
+        Data: {
+         Success: true,
+            Coin: "BTC",
+          Amount: 1000
+        }
+    }
+```
+
+参数
 
 | 字段 | 类型 | 描述 |
 | - | :-: | :- |
