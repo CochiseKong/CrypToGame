@@ -56,16 +56,17 @@
     
 *   响应
 ```javascript
-    {
+    {   
+      Status: true,
         Type: TypeName,
         Data: Datas
     }
 
     //返回充值消息
     {
+      Status: true,
         Type: "pay",
         Data: {
-           Success: true,
              Coin: "USD",
            Amount: 1000
         }
@@ -79,16 +80,16 @@
  **请求账户信息**
 ```javascript
     {
-        Type: "getUserInfo"
+        Type: "getuserinfo"
     }
 ```
 **返回账户信息**
 
 ```javascript
     {
-        Type: "getUserInfo",
+      Status: true,
+        Type: "getuserinfo",
         Data: {
-         Success: true,
             Name: "tony",
              Uid: "6MarTd",
              Vip: 0,
@@ -101,8 +102,8 @@
 
 | 字段 | 类型 | 描述 |
 | - | :-: | :- |
-|Type | string| 类型为 getUserInfo |
-|Data.Success | bool |  是否获取成功 |
+|Status | bool |  是否获取成功 |
+|Type | string| 类型为 getuserinfo |
 |Data.Name | string | 用户名称 |
 |Data.Uid | string | 用户ID |
 |Data.Vip | uint32 | 用户Vip等级|
@@ -122,9 +123,9 @@
 
 ```javascript
     {
+      Status: true,
         Type: "pay",
         Data: {
-         Success: true,
             Coin: "BTC",
           Amount: 1000
         }
@@ -135,8 +136,8 @@
 
 | 字段 | 类型 | 描述 |
 | - | :-: | :- |
+|Status | bool |  是否充值成功 |
 |Type | string| 类型为 pay |
-|Data.Success | bool |  是否充值成功 |
 |Data.Coin | uint32 | 币种。1 - BTC; 144 - USD|
 |Data.Amount | float64 | 充值数量 |
 
