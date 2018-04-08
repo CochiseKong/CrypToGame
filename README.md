@@ -11,7 +11,7 @@
 <br><br>
 ###    初始化
 ```javascript
-    //监听事件
+    //添加监听事件
     CTG.addEventListener("callbackName", function(data) {
         业务逻辑....
     });
@@ -74,23 +74,42 @@
 <br>
 
 
-* **getUserInfo**   (账号信息)
+* ### getUserInfo
 
-    <!-- (页面加载父窗口会主动发送) -->
+ **请求账户信息**
+```javascript
+    {
+        Type: "getUserInfo"
+    }
+```
+**返回账户信息**
 
-参数（页面加载父窗口会主动发送）
+```javascript
+    {
+        Type: "getUserInfo",
+        Data: {
+         Success: true,
+            Name: "tony",
+             Uid: "6MarTd",
+             Vip: 0,
+            Lang: "zh-cn",
+        }
+    }
+```
+
+参数
 
 | 字段 | 类型 | 描述 |
 | - | :-: | :- |
 |Type | string| 类型为 getUserInfo |
+|Data.Name | string | 用户名称 |
 |Data.Uid | string | 用户ID |
 |Data.Vip | uint32 | 用户Vip等级|
-|Data.Name | string | 用户名称 |
 |Data.Lang | string | 语言|
 
 <br>
 
-* **PAY**   （充值）
+* ### **PAY**
 
     <!-- (页面加载父窗口会主动发送) -->
 
