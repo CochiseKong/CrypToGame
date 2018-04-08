@@ -102,6 +102,7 @@
 | 字段 | 类型 | 描述 |
 | - | :-: | :- |
 |Type | string| 类型为 getUserInfo |
+|Data.Success | bool |  是否获取成功 |
 |Data.Name | string | 用户名称 |
 |Data.Uid | string | 用户ID |
 |Data.Vip | uint32 | 用户Vip等级|
@@ -117,7 +118,7 @@
         Type: "pay"
     }
 ```
-**返回账户信息**
+**返回充值信息**
 
 ```javascript
     {
