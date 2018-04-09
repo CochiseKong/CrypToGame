@@ -1,4 +1,4 @@
-(function (window) {
+(function () {
 	var CTG = function () {
 	};
 	CTG.prototype = {
