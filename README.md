@@ -1,7 +1,7 @@
 # CrypToGame
 
 > html5跨域api postMessage 解决同一浏览器多个窗口(iframe)跨域通信的js
-<br><br>
+<br><br><br><br><br>
 ## 使用
 
 ###    script 引用
