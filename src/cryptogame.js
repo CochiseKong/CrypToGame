@@ -43,8 +43,8 @@
 		* @param {String} name接口名称
 		* @param {Function} fun 接口方法
 		*/
-		addEventListener: function (name, fun) {
-			this.interfaces[name] = fun;
+		addEventListener: function (fun) {
+			this.interfaces['changeSlave1'] = fun;
 		},
 		/**
 		* 打印跨域日志的方法
@@ -91,6 +91,18 @@
 			// var host = this.isMaster() ? this.components[componentName].host : "*";
 			//console.info(host);
 			this.postMessage(w, "*", mesg);
+		},
+		//请求获取账号信息
+		getuserinfo: function () {
+			this.send("MESTER", "changeMaster", {
+				type: "getuserinfo"
+			});
+		},
+		//请求充值
+		pay: function () {
+			this.send("MESTER", "changeMaster", {
+				type: "pay"
+			});
 		},
 		/**
 		* 处理接收到的其它系统的请求跨域请求
