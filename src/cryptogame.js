@@ -104,6 +104,18 @@
 				type: "pay"
 			});
 		},
+		//请求横屏
+		landscape: function () {
+			this.send("MESTER", "changeMaster", {
+				type: "landscape"
+			});
+		},
+		//请求竖屏
+		portrait: function () {
+			this.send("MESTER", "changeMaster", {
+				type: "portrait"
+			});
+		},
 		/**
 		* 处理接收到的其它系统的请求跨域请求
 		*

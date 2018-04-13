@@ -87,5 +87,32 @@
 |Data.Coin | uint32 | 币种。1 - BTC; 144 - USD|
 |Data.Amount | float64 | 充值数量 |
 
+<br>
+
+* ### **横屏**
+
+ **请求**
+```javascript
+    CTG.landscape()
+```
+**返回**
+
+```javascript
+    无
+```
+
+<br>
+
+* ### **竖屏**
+
+ **请求**
+```javascript
+    CTG.portrait()
+```
+**返回**
+
+```javascript
+    无
+```
 
 
