@@ -10,17 +10,6 @@
      <script type="text/javascript" src="路径/cryptogame.js"></script>
 ```
 <br><br>
-###    初始化
-```javascript
-    //添加监听事件
-    CTG.addEventListener(function(data) {
-        业务逻辑....
-    });
-```
->参数
-   * data:  接收到的数据
-
-<br><br>
 
 ###    API
 
@@ -29,14 +18,15 @@
 
  **请求**
 ```javascript
-    CTG.getuserinfo()
+    CTG.getuserinfo(function(response){
+        // response: 返回的用户信息
+    })
 ```
 **返回**
 
 ```javascript
     {
-      Status: true,
-        Type: "info",
+      Status: 0,
         Data: {
             Name: "tony",
              Uid: "6MarTd",
@@ -50,8 +40,7 @@
 
 | 字段 | 类型 | 描述 |
 | - | :-: | :- |
-|Status | bool |  是否获取成功 |
-|Type | string| 类型为 info |
+|Status | number |  0 表示获取成功 |
 |Data.Name | string | 用户名称 |
 |Data.Uid | string | 用户ID |
 |Data.Vip | uint32 | 用户Vip等级|
@@ -63,14 +52,15 @@
 
  **请求**
 ```javascript
-    CTG.pay()
+    CTG.pay(function(response){
+        // response: 返回的充值消息
+    })
 ```
 **返回**
 
 ```javascript
     {
-      Status: true,
-        Type: "pay",
+      Status: 0,
         Data: {
             Coin: "BTC",
           Amount: 1000
@@ -82,8 +72,7 @@
 
 | 字段 | 类型 | 描述 |
 | - | :-: | :- |
-|Status | bool |  是否充值成功 |
-|Type | string| 类型为 pay |
+|Status | number |  0 表示充值成功 |
 |Data.Coin | uint32 | 币种。1 - BTC; 144 - USD|
 |Data.Amount | float64 | 充值数量 |
 
