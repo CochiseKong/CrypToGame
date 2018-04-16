@@ -1,6 +1,6 @@
 # CrypToGame
 
-> html5跨域api postMessage 解决同一浏览器多个窗口(iframe)跨域通信的js
+> 游戏平台 与 外部游戏通信 SDK  
 
 <br><br>
 ## 使用
@@ -19,7 +19,7 @@
  **请求**
 ```javascript
     CTG.getuserinfo(function(response){
-        // response: 返回的用户信息
+        // response:    返回的用户信息
     })
 ```
 **返回**
@@ -53,7 +53,7 @@
  **请求**
 ```javascript
     CTG.pay(function(response){
-        // response: 返回的充值消息
+        // response:    返回的充值消息
     })
 ```
 **返回**
