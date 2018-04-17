@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="./cryptogame_sdk.js" charset="utf-8"></script>
+</head>
+
+<body>
+  <h3>游戏 Demo</h3>
+  <p id="content"></p>
+  <button onclick="info()">获取账号信息</button>
+  <button onclick="pay()">充值</button>
+  <button onclick="landscape()">横屏</button>
+  <button onclick="portrait()">竖屏</button>
+</body>
+<script type="text/javascript">
+  // 获取信息
+  function info() {
+    CTG.getuserinfo(function(data) {
+      document.getElementById('content').innerHTML = JSON.stringify(data)
+      console.log(data);
+    })
+  };
+  // 请求充值
+  function pay() {
+    CTG.pay(function(data) {
+      console.log(data);
+    })
+  };
+  // 请求横屏
+  function landscape() {
+    CTG.landscape()
+  };
+  //请求竖屏
+  function portrait() {
+    CTG.portrait()
+  };
+</script>
+
+</html>
