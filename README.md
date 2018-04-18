@@ -45,6 +45,9 @@
 |Data.Uid | string | 用户ID |
 |Data.Vip | uint32 | 用户Vip等级|
 |Data.Lang | string | 语言|
+|Data.Time | string | 时间戳|
+|Data.Token | string | Token|
+|Data.AppId | string | 游戏 id|
 
 <br>
 
