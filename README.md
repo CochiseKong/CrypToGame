@@ -28,10 +28,14 @@
     {
       Status: 0,
         Data: {
-            Name: "tony",
-             Uid: "6MarTd",
-             Vip: 0,
-            Lang: "zh-cn",
+            AppId:"1001"
+            Lang:"zh-cn"
+            Name:"tdex.1001.t"
+            Nonce:"I6CGQC2OPSFXMOQ3"
+            Sign:"4c4664510a376090bc35d6462bb60516"
+            Time:1524106506
+            Token:"f36c27143086893a37c81e60bdcb7745"
+            Uid:"6L8Nhi"
         }
     }
 ```
