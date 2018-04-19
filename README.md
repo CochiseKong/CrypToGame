@@ -1,13 +1,13 @@
-# CrypToGame
+# CrypToGame_SDK
 
-> 游戏平台 与 外部游戏通信 SDK  
+> 游戏管理平台 与 外部游戏通信SDK
 
 <br><br>
 ## 使用
 
 ###    script 引用
 ```javascript
-     <script type="text/javascript" src="路径/cryptogame.js"></script>
+     <script type="text/javascript" src="路径/cryptogame_sdk.js"></script>
 ```
 <br><br>
 
@@ -83,7 +83,7 @@
 | 字段 | 类型 | 描述 |
 | - | :-: | :- |
 |Status | number |  0 表示充值成功 |
-|Data.Coin | uint32 | 币种。1 - BTC; 144 - USD|
+|Data.Coin | uint32 | 币种|
 |Data.Amount | float64 | 充值数量 |
 
 <br>
