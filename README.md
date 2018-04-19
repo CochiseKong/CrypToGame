@@ -41,13 +41,16 @@
 | 字段 | 类型 | 描述 |
 | - | :-: | :- |
 |Status | number |  0 表示获取成功 |
-|Data.Name | string | 用户名称 |
-|Data.Uid | string | 用户ID |
-|Data.Vip | uint32 | 用户Vip等级|
+|Data.AppId | string | 游戏 id|
 |Data.Lang | string | 语言|
+|Data.Name | string | 用户名称 |
+|Data.Nonce | string | 随机值|
+|Data.Uid | string | 用户ID |
 |Data.Time | string | 时间戳|
 |Data.Token | string | Token|
-|Data.AppId | string | 游戏 id|
+|Data.Sign | string | 用于游戏校验参数|
+    Sign = MD5("Uid={Uid}&Name={Name}&Nonce={Nonce}&Key={Key}")
+
 
 <br>
 
